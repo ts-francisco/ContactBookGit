@@ -109,6 +109,16 @@ public class ContactBook {
 	}
 
 	public boolean existRepeatedPhones() {
+		for (Contact contact : contacts) {
+			for (Contact contact1 : contacts) {
+				if (contact != null && contact1 != null) {
+					if (!contact.getName().equals(contact1.getName())
+							&& contact.getPhone() == contact1.getPhone()) {
+						return true;
+					}
+				}
+			}
+		}
 		return false;
 	}
 

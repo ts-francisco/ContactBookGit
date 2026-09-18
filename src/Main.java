@@ -172,5 +172,10 @@ public class Main {
 	}
 
 	private static void existRepeatedPhones(ContactBook cBook) {
+		if (cBook.existRepeatedPhones()) {
+			System.out.println("There are contacts that share phone numbers.");
+		} else {
+			System.out.println("All contacts have different phone numbers.");
+		}
 	}
 }

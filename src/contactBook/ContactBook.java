@@ -95,7 +95,11 @@ public class ContactBook {
 	}
 
 	public Contact getContact(int phone) {
-		return null
+		return null;
+	}
+
+	public boolean existRepeatedPhones() {
+		return false;
 	}
 
 }

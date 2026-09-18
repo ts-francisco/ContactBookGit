@@ -95,6 +95,16 @@ public class ContactBook {
 	}
 
 	public Contact getContact(int phone) {
+		int i = 0;
+		Contact result;
+		boolean found = false;
+		while (i < counter && !found) {
+			result = contacts[i];
+			if (result.getPhone() == phone)
+				return result;
+			else
+				i++;
+		}
 		return null;
 	}
 

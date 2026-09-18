@@ -158,10 +158,19 @@ public class Main {
 	}
 
 	private static void getContact(Scanner in, ContactBook cBook) {
+		int phone;
+		phone = in.nextInt();
+
+		Contact c = cBook.getContact(phone);
+
+		if (c == null) {
+			System.out.println("Phone number does not exist.");
+		} else {
+			System.out.println(c.getName() + "; " + c.getEmail() + "; " + c.getPhone());
+		}
 
 	}
 
 	private static void existRepeatedPhones(ContactBook cBook) {
-
 	}
 }
